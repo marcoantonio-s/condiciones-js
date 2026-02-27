@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Requerimiento 2</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/header-style.css">
+</head>
+<body>
+  
+  <header class="header">
+    <nav class="nav">
+        <a href="../index.html"><button class="btn">Inicio</button></a>
+        <a href="../requerimiento1/index.html"><button class="btn">Requerimiento 1</button></a>
+        <a href="../requerimiento2/index.html"><button class="btn active">Requerimiento 2</button></a>
+        <a href="../requerimiento3/index.html"><button class="btn">Requerimiento 3</button></a>
+    </nav>
+  </header> 
+
+<h1>Ingresa la cantidad de plantas</h1>
+<p>Puedes llevar máximo 10 unidades</p>
+
+<div class="contenedor">
+
+  <div class="item">
+    <img src="./assets/img/planta33.avif" alt="planta 1">
+    <input type="number" placeholder="Cantidad" id="cant1">
+  </div>
+
+  <div class="item">
+    <img src="./assets/img/planta11.avif" alt="planta 2">
+    <input type="number" placeholder="Cantidad" id="cant2">
+  </div>
+
+  <div class="item">
+    <img src="./assets/img/planta22.avif" alt="planta 3">
+    <input type="number" placeholder="Cantidad" id="cant3">
+  </div>
+
+</div>
+
+<p class="resultado" id="resultado"></p>
+
+<button
+onclick="
+
+let num1 = document.querySelector('#cant1').value
+let num2 = document.querySelector('#cant2').value
+let num3 = document.querySelector('#cant3').value
+
+let suma = Number(num1) + Number(num2) + Number(num3)
+
+if (suma ==0){
+  let resultado = document.querySelector('#resultado')
+  resultado.textContent = ('No haz ingresado la cantidad 🙄')
+} else if (suma <=10){
+  let resultado = document.querySelector('#resultado')
+  resultado.textContent = ('Muy bien, llevas ' + suma + ' plantas 😊')
+} else {
+  let resultado = document.querySelector('#resultado')
+  resultado.textContent = ('Lo siento, llevas demasiadas plantas 😔')
+}
+"
+>Verificar</button>
+
+</body>
+</html>

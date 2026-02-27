@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Requerimiento 3</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/header-style.css">
+</head>
+<body>
+  
+  <header class="header">
+    <nav class="nav">
+        <a href="../index.html"><button class="btn">Inicio</button></a>
+        <a href="../requerimiento1/index.html"><button class="btn">Requerimiento 1</button></a>
+        <a href="../requerimiento2/index.html"><button class="btn">Requerimiento 2</button></a>
+        <a href="../requerimiento3/index.html"><button class="btn active">Requerimiento 3</button></a>
+    </nav>
+  </header> 
+
+  <div class="contenedor">
+
+  <h1>Ingresa el Password</h1>
+
+  <div class="selects">
+  <select name="clave1" id="clave1">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  </select>
+
+  <select name="clave2" id="clave2">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  </select>
+
+  <select name="clave3" id="clave3">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  </select>
+  </div>
+
+  <button
+  onclick="
+
+  let password1 = 911
+  let password2 = 714
+
+  let num1 = document.querySelector('#clave1').value
+  let num2 = document.querySelector('#clave2').value
+  let num3 = document.querySelector('#clave3').value
+
+  let codigoIngresado = num1 + num2 + num3
+
+  if (codigoIngresado == password1){
+    let info = document.querySelector('#mensaje')
+    mensaje.innerHTML = 'Password 1 correcto ✅'
+  }
+  else if(codigoIngresado == password2){
+    let info = document.querySelector('#mensaje')
+    mensaje.innerHTML = 'Password 2 correcto ✅'
+  }
+  else {
+    let info = document.querySelector('#mensaje')
+    mensaje.innerHTML = 'Password incorrecto ❌'
+  }
+  "
+  >Ingresar</button>
+  <p id="mensaje"></p>
+
+  </div>
+
+</body>
+</html>

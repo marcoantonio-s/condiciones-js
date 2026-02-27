@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requerimiento 1</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/header-style.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav">
+        <a href="../index.html"><button class="btn">Inicio</button></a>
+        <a href="../requerimiento1/index.html"><button class="btn active">Requerimiento 1</button></a>
+        <a href="../requerimiento2/index.html"><button class="btn">Requerimiento 2</button></a>
+        <a href="../requerimiento3/index.html"><button class="btn">Requerimiento 3</button></a>
+    </nav>
+  </header>
+
+  <div class="item">
+    <img src="./assets/img/iphone.png" class="imagen" alt="iPhone"
+      onclick="
+          let imagen = document.querySelector('.imagen')
+          if(imagen.style.border == 'none') {
+              imagen.style.border = '2px solid red'
+          } else {
+              imagen.style.border = 'none'
+          }
+      "
+    >
+  </div>
+
+  <p>Haz clic en la imagen 😉</p>
+
+</body>
+</html>
